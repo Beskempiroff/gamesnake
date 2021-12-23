@@ -24,3 +24,18 @@ snake_speed = 15
  
 font_style = pygame.font.SysFont("bahnschrift", 25)
 score_font = pygame.font.SysFont("comicsansms", 35)
+
+def Your_score(score):
+    value = score_font.render("Zhinalgan: " + str(score), True, yellow)
+    dis.blit(value, [0, 0])
+ 
+ 
+ 
+def our_snake(snake_block, snake_list):
+    for x in snake_list:
+        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
+ 
+ 
+def message(msg, color):
+    mesg = font_style.render(msg, True, color)
+    dis.blit(mesg, [dis_width / 6, dis_height / 3])
